@@ -20,7 +20,7 @@ services:
   restart: always
 
  mysql:
-  image: mysql:5.7
+  build: ./mysql
   volumes:
    - db-data:/var/lib/mysql
   environment:
@@ -36,6 +36,11 @@ services:
   depends_on:
    - mysql
   restart: always
+
+ mail:
+  image: mailhog/mailhog
+  ports:
+   - 8025:8025
 
 volumes:
  db-data:
