@@ -26,7 +26,8 @@ services:
   volumes:
    - db-data:/var/lib/mysql
   environment:
-   MYSQL_ROOT_PASSWORD: $MYSQL_ROOT_PASSWORD
+   MYSQL_DATABASE: laravel
+   MYSQL_ROOT_PASSWORD: testtest
   restart: always
 
  phpmyadmin:
