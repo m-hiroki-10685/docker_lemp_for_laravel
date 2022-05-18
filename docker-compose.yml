@@ -27,7 +27,8 @@ services:
    - db-data:/var/lib/mysql
   environment:
    MYSQL_DATABASE: laravel
-   MYSQL_ROOT_PASSWORD: testtest
+   MYSQL_USER: user
+   MYSQL_PASSWORD: pass
   restart: always
 
  phpmyadmin:
